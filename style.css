@@ -11,9 +11,27 @@
 
 body {
     width: 100vw;
+    height: auto;
     font-family: "Roboto", sans-serif;
     color: #333;
-    background-color: #fff;
+    /* background-color: #1b1b1b; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+section {
+    width: 1440px;
+    height: 450px;
+    margin: auto;
+    background-color: #f3f5f4;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 a {
@@ -25,18 +43,37 @@ p {
     font-size: 18px;
 }
 
-.container {
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    padding: 8px 28px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #81b3ba;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+/* --------------------------------- NAVIGATION */
+
+.nav {
+    background-color: #04232e;
     width: 1440px;
+    height: 80px;
+    padding: 30px;
     margin: auto;
 }
 
-header {
-    background-color: #114f21;
-    width: 100%;
-    padding: 30px;
-}
-
-header ul {
+.nav ul {
     width: 1024px;
     display: flex;
     gap: 12px;
@@ -51,21 +88,20 @@ header ul {
     font-size: 24px;
     font-weight: 900;
 }
+/* --------------------------------- BANNER */
 
-.hero-section {
-    width: 100%;
-    background-color: #114f21;
-    padding: 80px;
-    margin: auto;
-    height: 450px;
+
+.hero {
+    background-color: #04232e;
 }
 
 .hero-block {
     width: 1024px;
+    height: 250px;
     color: #fff;
     display: flex;
     gap: 60px;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: stretch;
     flex-direction: row;
     margin: auto;
@@ -74,6 +110,15 @@ header ul {
 .hero-block div {
     flex: 1;
     width: 500px;
+}
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.hero-text-block h1, p, button {
+
 }
 
 .hero-text-block p {
@@ -87,26 +132,152 @@ header ul {
 }
 
 
-
-button {
-    padding: 10px 24px;
-    border-radius: 20px;
-    border: none;
-    font-size: 18px;
-    font-weight: 900;
-    background-color: #49ad5e;
-}
-
 .hero-image {
-    background-color: #9da598;
+    border-radius: 10px;
+}
+
+/* --------------------------------- GALLERY SECTION */
+.gallery h2 {
+    margin-bottom: 36px;
+}
+
+
+.gallery-block {
+    width: 840px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    gap: 40px;
+}
+
+.gallery-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    text-align: center;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 200px;
+    background-color: #496E71;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 4px solid #81B3BA;
 }
 
 
 
+/* --------------------------------- QUOTE SECTION */
+
+.quote {
+    background-color: #e6ebe9;
+    margin: auto;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.quote-block {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.quote-text {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    font-weight: 200;
+    flex: 2;
+
+}
+
+.quote-text strong {
+    padding: 0 18px;
+}
+
+.author {
+    padding: 18px 0;
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.author img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #81b3ba;
+}
+
+.author p{
+    text-align: left;
+    font-size: 18px;
+}
 
 
 
+/* --------------------------------- SIGN UP SECTION */
 
-.footer {
-    background-color: #114f21;
+.sign-up {
+    margin: auto;
+    height: 350px;
+}
+
+.sign-up-block {
+    width: 1024px;
+    background-color: #81b3ba;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 60px 80px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.sign-up-block h3 {
+    font-size: 24px;
+}
+
+.sign-up-block button {
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sign-up-block button:hover {
+    background-color: #04232e;
+}
+
+
+/* --------------------------------- FOOTER */
+
+
+footer {
+    width: 1440px;
+    height: 80px;
+    background-color: #04232e;
+    color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
